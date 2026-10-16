@@ -28,7 +28,7 @@ jobs:
           username: ubuntu
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            cd ~/employee-be
+            cd ~/Docker_Project/Employee_Management_BE
             git pull origin main
             docker build -t employee-be .
             docker rm -f employee-api || true
